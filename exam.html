@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changing Content with Same Image</title>
+<link rel="stylesheet" href="exam.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+  
+</style>
+</head>
+<body>
+<div>
+    <section class="main"> 
+        <nav class="navbar">
+            <div class="logo"><img src="logo-removebg-preview.png" alt=""></div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-list" id="navList">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <div class="container">
+        <h1 class="bre">BOARD REALITY EXAM</h1>
+        <div class="enrol">
+            <h2 class="para">Empowering Excellence: Unveiling Your Academic Potential</h2>
+            <button class="btns">Enroll</button>
+        </div>
+    </div>
+</div>
+
+<div class="containere">
+    <!-- First content section -->
+    <div class="contente" id="content1">
+        <div class="number" id="number1">1</div>
+        <div class="name">APPEARED <br> STUDENT</div>
+    </div>
+  
+    <!-- Second content section -->
+    <div class="contente" id="content2">
+        <div class="number" id="number2">2</div>
+        <div class="name">ENROLLED <br> STUDENT</div>
+    </div>
+  
+    <!-- Third content section -->
+    <div class="contente" id="content3">
+        <div class="number" id="number3">3</div>
+        <div class="name">PASSED <br>  STUDENT</div>
+    </div>
+  
+    <!-- Fourth content section -->
+    <div class="contente" id="content4">
+        <div class="number" id="number4">4</div>
+        <div class="name">TOTAL <br> EXAM</div>
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const contents = document.querySelectorAll('.contente');
+
+    function showContent(index) {
+        contents.forEach(content => {
+            // content.style.display = 'none';
+        });
+        contents[index].style.display = 'block';
+    }
+
+    function nextContent(){
+        currentIndex = (currentIndex + 1) % contents.length;
+        showContent(currentIndex);
+    }
+
+    showContent(currentIndex);
+    setInterval(nextContent, 3000);
+
+    const limit1 = 200; // Set the limit for number1
+    const limit2 = 70; // Set the limit for number2
+    const limit3 = 100; // Set the limit for number3
+    const limit4 = 90; // Set the limit for number4
+
+    let number1 = 1;
+    let number2 = 2;
+    let number3 = 3;
+    let number4 = 4;
+
+    function updateNumbers() {
+        document.getElementById('number1').innerText = number1;
+        document.getElementById('number2').innerText = number2;
+        document.getElementById('number3').innerText = number3;
+        document.getElementById('number4').innerText = number4;
+
+        // Increment numbers and stop when they reach their limits
+        if (number1 < limit1) {
+            number1++;
+        }
+        if (number2 < limit2) {
+            number2++;
+        }
+        if (number3 < limit3) {
+            number3++;
+        }
+        if (number4 < limit4) {
+            number4++;
+        }
+    }
+
+    // Update numbers every second
+    const intervalId = setInterval(updateNumbers, 10);
+
+    // Stop updating numbers when all numbers reach their limits
+    const checkLimitIntervalId = setInterval(() => {
+        if (number1 === limit1 && number2 === limit2 && number3 === limit3 && number4 === limit4) {
+            clearInterval(intervalId);
+            clearInterval(checkLimitIntervalId);
+        }
+    }, 1000);
+</script>
+
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script> -->
+
+</body>
+</html>

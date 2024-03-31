@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body{
+    margin: 0;
+}
+.main{
+    /* height: 600px; */
+    height: fit-content;
+    background: url("school2.jpg") center center/cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: fit-content;
+    padding: 0;
+}
+.maincontent{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    /* display: flex; */
+} 
+iframe{
+    margin: 1%;
+    width: 500px;
+    height: 250px;
+        
+}
+.content{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #d7b211;
+}
+.subcontent{
+    font-size: 20px;
+    color: #fff;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    display: flex;
+    overflow: hidden;
+    right: 0px;
+    height: 80px;
+}
+.logo{
+    width: 30%;
+}
+.logo img{
+    margin-left: 10%;
+    width: 240px;
+    height: 80px;
+}
+
+.navbar .menu-icon {
+    
+    font-size: 24px;
+    color: #c91717;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-list li {
+    float: left;
+}
+
+.nav-list li a {
+    display: block;
+    color: #fafafa;
+    text-align: center;
+    margin: 20px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.nav-list li a:hover {
+    color: #a21313;
+    backdrop-filter: blur(1);
+    scale: 1.1;
+
+}
+.publish{
+    background-color: #b83030;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    position: fixed;
+    width: 7%;
+    right: 18px;
+    bottom: 40px;
+height: 6%;
+border-radius: 40px;
+
+}
+.choose{
+    padding-top: 100px;
+}
+.forstudent{
+    margin-bottom: 3%;
+    background-color: #db920050;
+    width: 90%;
+   
+    display: flex;
+    margin-left: 5%;
+    /* height: fit-content; */
+    height: 400px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+.studentimg{
+    margin: 2%;
+ } 
+ .studentinfo{
+    margin: 2%;
+    padding-top: 3%;
+    color: #a21313;
+    font-size: 20px;
+ }
+.studentimg img{
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+} 
+.btga{
+    background-color: #a21313;
+    width: 150px;
+    height: 34px;
+    margin-bottom: 2%;
+    border-radius: 40px;
+    margin: 2%;
+    border: none;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+
+}
+#forschool{
+    margin-left: 35%;
+}
+
+
+
+#popupOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  #popupContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+  
